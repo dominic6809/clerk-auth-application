@@ -1,0 +1,58 @@
+.dashboardContainer {
+  padding: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.welcomeText {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: var(--line-height-heading);
+}
+
+.userButtonWrapper {
+  position: relative;
+  transition: transform var(--transition-normal);
+}
+
+.userButtonWrapper:hover {
+  transform: translateY(-1px);
+}
+
+/* Dark mode specific styles */
+@media (prefers-color-scheme: dark) {
+  .dashboardContainer {
+    background-color: var(--surface);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardContainer {
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm);
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+  }
+  
+  .welcomeText {
+    font-size: 1.5rem;
+  }
+}
